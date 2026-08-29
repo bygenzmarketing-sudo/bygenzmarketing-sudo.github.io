@@ -1,0 +1,2119 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #faf9fc;
+  --color-text: #131920;
+  --color-navbar-bg: #f9f9fb;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #fff;
+  --color-bg-tertiary: #f9fafb;
+  --color-bg-hover: #f3f4f6;
+  --color-surface: #f9fafb;
+  --color-surface-hover: #f3f4f6;
+  --color-surface-active: #e5e7eb;
+  --color-border: #0000001f;
+  --color-border-light: #0000000f;
+  --color-border-strong: #d1d5db;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent);
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --block-hover-outline: 1px dashed color-mix(in srgb, #4200db 50%, transparent);
+  --block-selected-outline: 1px solid #8575ff;
+  --block-selection-outline-offset: 2px;
+  --block-selected-halo: 0 0 8px color-mix(in srgb, #4200db 40%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #fff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #e8e6ff;
+  --color-user-bubble: #f3f3f7;
+  --color-user-bubble-text: #131920;
+  --color-text-secondary: #5e5e5e;
+  --color-text-tertiary: #656871;
+  --color-text-muted: #9ca3af;
+  --color-text-on-primary: #fff;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f5eb;
+  --color-success-border: #b3d9bf;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fceaea;
+  --color-error-border: #f2cccc;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #fff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fef7e6;
+  --color-warning-border: #f9dfa3;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #ebf3fc;
+  --color-info-border: #b3d1f0;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #fff;
+  --color-overlay: #00000080;
+  --color-shadow: #00000014;
+  --color-hover: #0000000d;
+  --color-tooltip-bg: #000000d9;
+  --color-tooltip-text: #fff;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: #4200db66;
+  --color-voice-red-glow: #db000066;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px #0000000d;
+  --shadow-md: 0 4px 12px #00000014;
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #10b981;
+  --color-teal: #4ecdc4;
+  --color-code-bg: #f3f3f7;
+  --color-code-header-bg: #f1f3f5;
+  --color-code-text: #24292e;
+  --color-code-border: #e1e4e8;
+  --color-code-muted: #6a737d;
+  --color-inline-code-bg: #f3f3f7;
+  --color-inline-code-text: #24292e;
+  --color-inline-code-border: #e1e4e8;
+  --color-scrollbar-thumb: #d1d5db;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #333;
+  --color-graph-node-text-dim: #7f8c8d;
+  --color-graph-edge-default: #95a5a6;
+  --color-graph-edge-cross: #e67e22;
+  --color-graph-edge-text: #666;
+  --color-graph-edge-stroke: #fff;
+  --color-graph-highlight-bg: #ff6b6b;
+  --color-graph-highlight-border: #e74c3c;
+  --color-graph-search-bg: gold;
+  --color-graph-search-border: orange;
+  --color-graph-focus-border: #c0392b;
+  --color-graph-external-border: #95a5a6;
+  --color-graph-cat-file: #3498db;
+  --color-graph-cat-folder: #7f8c8d;
+  --color-graph-cat-file-aggregate: #2980b9;
+  --color-graph-cat-class: #9b59b6;
+  --color-graph-cat-function: #2ecc71;
+  --color-graph-cat-method: #1abc9c;
+  --color-graph-cat-variable: #f39c12;
+  --color-graph-cat-import: #d35400;
+  --color-graph-cat-module: #5b6abf;
+  --color-graph-cat-concept: #e74c3c;
+  --color-graph-cat-person: #ff6b6b;
+  --color-graph-cat-org: #4ecdc4;
+  --color-graph-cat-organization: #4ecdc4;
+  --color-graph-cat-product: #a29bfe;
+  --color-graph-cat-metric: #fd79a8;
+  --color-graph-cat-location: #34495e;
+  --color-graph-cat-date: #e056a0;
+  --color-graph-cat-code: #3498db;
+  --color-graph-cat-doc: #7f8c8d;
+  --color-graph-cat-url: #00b894;
+  --color-graph-cat-email: #6c5ce7;
+  --color-graph-cat-unknown: #bdc3c7;
+  --color-graph-rel-contains: #bdc3c7;
+  --color-graph-rel-extends: #9b59b6;
+  --color-graph-rel-implements: #3498db;
+  --color-graph-rel-imports: #e67e22;
+  --color-graph-rel-uses: #2ecc71;
+  --color-graph-rel-calls: #27ae60;
+  --color-graph-rel-references: #f39c12;
+  --color-graph-rel-related-to: #95a5a6;
+  --color-graph-rel-works-on: #e74c3c;
+  --color-graph-rel-owns: #1abc9c;
+  --color-graph-rel-depends-on: #e67e22;
+  --color-graph-rel-parent-of: #bdc3c7;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #9ca3af;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #f9fafb;
+  --qs-tertiary-background: #f9fafb;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --safe-top: 0px;
+  --safe-bottom: 0px;
+  --safe-left: 0px;
+  --safe-right: 0px;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: #b400aa;
+  --highlight-selected-bg-color: #006400;
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bygenz Marketing | Digital Marketing Specialist</title>
+    <meta name="description" content="Bygenz Marketing - Digital Marketing Specialist helping businesses grow online through social media, SEO, paid ads, and brand building.">
+    <meta property="og:title" content="Bygenz Marketing | Digital Marketing Specialist">
+    <meta property="og:description" content="Helping small businesses get their first 100 customers online.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #F59E0B;
+            --primary-light: #FBBF24;
+            --primary-dark: #D97706;
+            --secondary: #F59E0B;
+            --accent: #F59E0B;
+            --dark: #0F0F1A;
+            --dark-light: #1A1A2E;
+            --dark-card: #16162A;
+            --text: #FFFFFF;
+            --text-secondary: #B4B4C7;
+            --text-muted: #6B6B80;
+            --gradient: linear-gradient(135deg, #F59E0B, #FBBF24);
+            --gradient-subtle: linear-gradient(135deg, rgba(245,158,11,0.1), rgba(251,191,36,0.1));
+        }
+
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.1);
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover { color: var(--primary-light); }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 24px 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(245,158,11,0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(245,158,11,0.05) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -20px); }
+        }
+
+        .hero-content {
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient-subtle);
+            border: 1px solid rgba(245,158,11,0.3);
+            border-radius: 50px;
+            padding: 8px 20px;
+            font-size: 13px;
+            color: var(--primary-light);
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(40px, 8vw, 72px);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(16px, 2.5vw, 20px);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 20px rgba(245,158,11,0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(245,158,11,0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--primary-light);
+            background: rgba(245,158,11,0.1);
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            padding: 60px 24px;
+            background: var(--dark-light);
+            border-top: 1px solid rgba(245,158,11,0.1);
+            border-bottom: 1px solid rgba(245,158,11,0.1);
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 36px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-item p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 4px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 100px 24px;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--primary-light);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image .image-placeholder {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--gradient-subtle);
+            border-radius: 20px;
+            border: 1px solid rgba(245,158,11,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+        }
+
+        .about-content h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .about-content p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+
+        .tool-tag {
+            background: var(--gradient-subtle);
+            border: 1px solid rgba(245,158,11,0.2);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--primary-light);
+        }
+
+        /* SERVICES */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .service-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245,158,11,0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before { opacity: 1; }
+
+        .service-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        /* PROCESS */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            position: relative;
+        }
+
+        .process-grid::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 2px;
+            background: var(--gradient);
+            opacity: 0.3;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .process-number {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .process-step h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .process-step p {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* PRICING */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .pricing-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: 20px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary);
+            transform: scale(1.05);
+            box-shadow: 0 20px 60px rgba(245,158,11,0.2);
+        }
+
+        .pricing-card.featured .pricing-badge {
+            display: block;
+        }
+
+        .pricing-badge {
+            display: none;
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .pricing-card .price {
+            font-size: 40px;
+            font-weight: 700;
+            margin: 16px 0;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .pricing-card .price span {
+            font-size: 16px;
+            font-weight: 400;
+            -webkit-text-fill-color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin: 24px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .pricing-features li i {
+            color: var(--primary-light);
+            font-size: 12px;
+        }
+
+        /* CASE STUDIES */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+
+        .case-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .case-card-image {
+            height: 200px;
+            background: var(--gradient-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+
+        .case-card-content {
+            padding: 24px;
+        }
+
+        .case-card-content h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .case-card-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .case-metrics {
+            display: flex;
+            gap: 16px;
+        }
+
+        .case-metric {
+            background: rgba(245,158,11,0.1);
+            padding: 8px 14px;
+            border-radius: 8px;
+        }
+
+        .case-metric .value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--primary-light);
+        }
+
+        .case-metric .label {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            color: var(--primary);
+            opacity: 0.3;
+            position: absolute;
+            top: 16px;
+            left: 24px;
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .testimonial-author-info h4 {
+            font-size: 14px;
+        }
+
+        .testimonial-author-info p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .stars {
+            color: var(--accent);
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+
+        /* BLOG / TIPS */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.1);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(245,158,11,0.3);
+        }
+
+        .blog-card-image {
+            height: 160px;
+            background: var(--gradient-subtle);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .blog-card-content {
+            padding: 24px;
+        }
+
+        .blog-tag {
+            font-size: 11px;
+            color: var(--primary-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .blog-card-content h3 {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .blog-card-content p {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* CONTACT */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .contact-info p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .contact-method i {
+            color: var(--primary-light);
+            font-size: 18px;
+            width: 24px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 12px;
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--dark-light);
+            border-top: 1px solid rgba(245,158,11,0.1);
+            padding: 60px 24px 24px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .footer-links h4 {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 13px;
+            padding: 4px 0;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover { color: var(--primary-light); }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(245,158,11,0.1);
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+
+        /* WHATSAPP FLOAT */
+        
+
+        /* RESPONSIVE */
+        @media (max-width: 1024px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; margin: 0 auto; }
+            .pricing-card.featured { transform: none; }
+            .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid::before { display: none; }
+        }
+
+        @media (max-width: 768px) {
+            #free-audit > div > div { grid-template-columns: 1fr !important; }
+            .nav-links { display: none; }
+            .mobile-toggle { display: block; }
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--dark);
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid rgba(245,158,11,0.1);
+            }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr; gap: 32px; }
+            .form-row { grid-template-columns: 1fr; }
+            .case-studies-grid { grid-template-columns: 1fr; }
+        }
+
+        
+        /* PROJECT MODAL */
+        .project-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            overflow-y: auto;
+        }
+
+        .project-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--dark-card);
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 20px;
+            max-width: 700px;
+            width: 100%;
+            padding: 40px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover { color: var(--primary-light); }
+
+        .modal-content h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .modal-content .modal-subtitle {
+            color: var(--primary-light);
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .modal-content .growth-highlight {
+            background: var(--gradient-subtle);
+            border: 1px solid rgba(245,158,11,0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .modal-content .growth-highlight .big-number {
+            font-size: 36px;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modal-content .growth-highlight p {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .modal-platforms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 16px;
+        }
+
+        .modal-platforms span {
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: var(--primary-light);
+        }
+
+        
+        
+        /* FAQ */
+        .faq-item.open p { display: block !important; }
+        .faq-item.open i { transform: rotate(180deg); }
+        .faq-item:hover { border-color: rgba(245,158,11,0.3) !important; }
+
+        /* TYPING ANIMATION */
+        .cursor {
+            animation: blink 0.8s infinite;
+            color: var(--primary-light);
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* ANIMATIONS */
+        @media (prefers-reduced-motion: no-preference) {
+            .reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+            .reveal.active { opacity: 1; transform: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Bygenz Marketing</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#projects">Projects</a></li>
+                                                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">✨ Available for New Projects</div>
+            <h1>I Help Businesses Grow With <br><span id="typed-text"></span><span class="cursor">|</span></h1>
+            <p class="hero-subtitle">Certified Digital Marketing Specialist helping businesses grow online through social media, SEO &amp; paid ads.</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+                <a href="#contact" class="btn btn-secondary"><i class="fas fa-search"></i> Free Website Audit</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stats-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="stat-item">
+                <h3><span class="counter" data-target="8">0</span>+</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="5">0</span>+</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3><span class="counter" data-target="4">0</span>+</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-container">
+            <div class="about-grid reveal">
+                <div class="about-image">
+                    <div class="image-placeholder">👩‍💻</div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">About Me</span>
+                    <h3>I'm Jennifer C, founder of Bygenz Marketing — a Certified Digital Marketing Specialist based in Chennai, India.</h3>
+                    <p>With 3 years of experience as a Digital Marketing Associate, I help small businesses and startups build a powerful digital presence — from social media setup to paid ad campaigns.</p>
+                    <p>My mission: make digital marketing accessible, affordable, and effective for every business.</p>
+                    <div class="tools-list">
+                        <span class="tool-tag">Meta Business Suite</span>
+                        <span class="tool-tag">Google Ads</span>
+                        <span class="tool-tag">Canva</span>
+                        <span class="tool-tag">Mailchimp</span>
+                        <span class="tool-tag">SEMrush</span>
+                        <span class="tool-tag">WordPress</span>
+                        <span class="tool-tag">Google Analytics</span>
+                        <span class="tool-tag">Hootsuite</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Credentials</span>
+                <h2>Certified Digital Marketer</h2>
+                <p></p>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;" class="reveal">
+                <div class="service-card" style="text-align: center; padding: 40px 32px;">
+                    <div style="font-size: 40px; margin-bottom: 16px;">🏅</div>
+                    <h3 style="font-size: 16px; margin-bottom: 8px;">Executive Certificate Program in Digital Marketing</h3>
+                    <p style="color: var(--primary-light); font-size: 13px; margin-bottom: 4px;">Entri Software + Skill India + NSDC</p>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 12px;">Grade: <strong style="color: var(--primary-light);">A+</strong></p>
+                    <p style="color: var(--text-muted); font-size: 12px;">Issued: August 2026</p>
+                    <a href="assets/NSSC-Certificate.pdf" target="_blank" style="display: inline-block; margin-top: 16px; color: var(--primary-light); font-size: 12px; text-decoration: none; border: 1px solid rgba(245,158,11,0.3); padding: 6px 14px; border-radius: 20px;">
+                        <i class="fas fa-certificate"></i> View Certificate
+                    </a>
+                </div>
+                <div class="service-card" style="text-align: center; padding: 40px 32px;">
+                    <div style="font-size: 40px; margin-bottom: 16px;">🎓</div>
+                    <h3 style="font-size: 16px; margin-bottom: 8px;">Certificate of Completion — Digital Marketing</h3>
+                    <p style="color: var(--primary-light); font-size: 13px; margin-bottom: 4px;">Entri App</p>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-bottom: 12px;">Executive Certificate Program</p>
+                    <p style="color: var(--text-muted); font-size: 12px;">Issued: June 2026</p>
+                    <a href="assets/Entri-Certificate.pdf" target="_blank" style="display: inline-block; margin-top: 16px; color: var(--primary-light); font-size: 12px; text-decoration: none; border: 1px solid rgba(245,158,11,0.3); padding: 6px 14px; border-radius: 20px;">
+                        <i class="fas fa-certificate"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO I WORK WITH -->
+    <section style="padding: 60px 24px;">
+        <div class="section-container" style="text-align: center;">
+            <span class="section-tag">Who I Work With</span>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 32px;">Businesses I Help Grow</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px;" class="reveal">
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🚀</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">Startups</p>
+                </div>
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🏪</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">Small Businesses</p>
+                </div>
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">👤</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">Solopreneurs</p>
+                </div>
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🏬</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">Local Shops</p>
+                </div>
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🎓</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">Coaches &amp; Consultants</p>
+                </div>
+                <div style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 28px; text-align: center;">
+                    <div style="font-size: 28px; margin-bottom: 8px;">🛒</div>
+                    <p style="font-size: 13px; color: var(--text-secondary);">E-commerce Brands</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: var(--dark-light);">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">What I Offer</span>
+                <h2>My Services</h2>
+                <p>Digital marketing solutions for small businesses and startups.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">📱</div>
+                    <h3>Social Media Setup &amp; Management</h3>
+                    <p>Profile setup, branding, bio optimization &amp; content strategy across all platforms.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📊</div>
+                    <h3>Facebook Business Manager</h3>
+                    <p>Pages, ad accounts, pixels &amp; permissions — ready to run ads and scale.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🎬</div>
+                    <h3>YouTube &amp; Multi-Platform Optimization</h3>
+                    <p>Channel setup, keyword optimization, thumbnails &amp; cross-platform presence.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🌐</div>
+                    <h3>Website Creation</h3>
+                    <p>Professional websites that represent your brand and convert visitors.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">✍️</div>
+                    <h3>Content Strategy</h3>
+                    <p>Content that speaks to your audience and keeps them engaged.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📈</div>
+                    <h3>Brand Presence Building</h3>
+                    <p>Establishing a consistent, credible digital identity from the ground up.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🔍</div>
+                    <h3>SEO Optimization</h3>
+                    <p>Keyword research, on-page optimization &amp; strategic content for organic traffic.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">🎯</div>
+                    <h3>Lead Generation</h3>
+                    <p>Targeted campaigns, landing pages &amp; digital outreach to convert leads.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">💰</div>
+                    <h3>Paid Ads Management</h3>
+                    <p>Facebook, Instagram &amp; Google ad campaigns optimized for maximum ROI.</p>
+                </div>
+                <div class="service-card reveal">
+                    <div class="service-icon">📧</div>
+                    <h3>Email Campaigns</h3>
+                    <p>Nurture leads &amp; drive conversions with smart email segmentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS -->
+    
+
+    <!-- PRICING -->
+    <section id="pricing" style="background: var(--dark-light);">
+        <div class="section-container">
+            <div style="text-align:center; max-width: 600px; margin: 0 auto;">
+                <span class="section-tag">Pricing</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 36px; margin-bottom: 16px;">Let's Discuss Your Needs</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 12px;">Every business is unique — so is my pricing. I'll create a plan that fits your goals and budget.</p>
+                <p style="color: var(--text-muted); font-size: 14px; margin-bottom: 32px;"></p>
+                <a href="#contact" class="btn btn-primary"><i class="fas fa-comments"></i> Let's Talk About Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDIES / PROJECTS -->
+    <section id="projects">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2>Projects</h2>
+                <p>Click any project to see detailed results.</p>
+            </div>
+            <div class="case-studies-grid reveal">
+                <div class="case-card" onclick="openProject('safari')" style="cursor:pointer;">
+                    <div class="case-card-image">✈️</div>
+                    <div class="case-card-content">
+                        <h3>Intel Safari Travel <i class="fas fa-external-link-alt" style="font-size:12px; color:var(--primary-light);"></i></h3>
+                        <span class="section-tag" style="font-size: 0.7rem;">Freelance Project · Social Media &amp; Digital Setup</span>
+                        <p>Built the complete online presence for a US-based travel brand from scratch — Instagram, Facebook, YouTube, Twitter/X, and Quora.</p>
+                        <div class="case-metrics" style="margin-top: 12px;">
+                            <div class="case-metric">
+                                <div class="value">0 → 12K</div>
+                                <div class="label">Instagram Growth</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="value">6</div>
+                                <div class="label">Platforms Setup</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="case-card" onclick="openProject('website')" style="cursor:pointer;">
+                    <div class="case-card-image">🌐</div>
+                    <div class="case-card-content">
+                        <h3>Website Build <i class="fas fa-external-link-alt" style="font-size:12px; color:var(--primary-light);"></i></h3>
+                        <span class="section-tag" style="font-size: 0.7rem;">Web Design Project</span>
+                        <p>Designed and built a complete professional website — demonstrating web structure, UX principles, and branding consistency.</p>
+                        <div class="case-metrics" style="margin-top: 12px;">
+                            <div class="case-metric">
+                                <div class="value">Live</div>
+                                <div class="label">Website</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="value">100%</div>
+                                <div class="label">Responsive</div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="case-card" onclick="openProject('thirdthink')" style="cursor:pointer;">
+                    <div class="case-card-image">🔍</div>
+                    <div class="case-card-content">
+                        <h3>ThirdThink Digital <i class="fas fa-external-link-alt" style="font-size:12px; color:var(--primary-light);"></i></h3>
+                        <span class="section-tag" style="font-size: 0.7rem;">Complete Website SEO Audit</span>
+                        <p>Conducted a comprehensive SEO &amp; marketing audit for a newly launched digital marketing agency — covering on-page SEO, backlinks, usability, performance, and GEO.</p>
+                        <div class="case-metrics" style="margin-top: 12px;">
+                            <div class="case-metric">
+                                <div class="value">20+</div>
+                                <div class="label">Recommendations</div>
+                            </div>
+                            <div class="case-metric">
+                                <div class="value">Full</div>
+                                <div class="label">SEO Audit</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></section>
+
+    <!-- PROJECT DETAIL MODAL -->
+    <div id="projectModal" class="project-modal" onclick="if(event.target===this)closeProject()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProject()"><i class="fas fa-times"></i></button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- TESTIMONIALS -->
+
+    <!-- BLOG / TIPS -->
+    
+
+    <!-- CONTACT -->
+    <!-- FREE WEBSITE AUDIT -->
+    <!-- FAQ -->
+    <section id="faq" style="padding: 80px 24px;">
+        <div class="section-container" style="max-width: 800px;">
+            <div class="section-header">
+                <span class="section-tag">FAQ</span>
+                <h2>Common Questions</h2>
+            </div>
+            <div class="reveal">
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 15px;">How long does it take to see results?</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-light); font-size: 12px; transition: transform 0.3s;"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-top: 12px; display: none;">For social media, you can start seeing engagement within 2-4 weeks. For SEO, it typically takes 2-3 months for noticeable ranking improvements. Paid ads can generate leads within the first week of launch.</p>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 15px;">What's the minimum budget to get started?</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-light); font-size: 12px; transition: transform 0.3s;"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-top: 12px; display: none;">There's no strict minimum. I work with businesses of all sizes and customize plans based on your budget. Even ₹3,000–5,000/month can get you started with basic social media or SEO.</p>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 15px;">Do you work with businesses outside India?</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-light); font-size: 12px; transition: transform 0.3s;"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-top: 12px; display: none;">Yes! I work with clients globally. Intel Safari Travel is a US-based client. All communication happens over email and video calls, so location is never a barrier.</p>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 15px;">Can I hire you for just one service (like only SEO)?</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-light); font-size: 12px; transition: transform 0.3s;"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-top: 12px; display: none;">Absolutely! You can pick any single service — SEO only, social media only, just paid ads, or just a website. No need to commit to a full package.</p>
+                </div>
+                <div class="faq-item" onclick="this.classList.toggle('open')" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.1); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px; cursor: pointer; transition: all 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <h3 style="font-size: 15px;">What do I need to provide to get started?</h3>
+                        <i class="fas fa-chevron-down" style="color: var(--primary-light); font-size: 12px; transition: transform 0.3s;"></i>
+                    </div>
+                    <p style="color: var(--text-secondary); font-size: 13px; margin-top: 12px; display: none;">Just your business details, goals, and any existing social media/website access. I handle everything else — from strategy to execution. We start with a free discovery call.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="free-audit" style="padding: 80px 24px;">
+        <div class="section-container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center;" class="reveal">
+                <div>
+                    <span class="section-tag">Free Offer</span>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; margin-bottom: 16px;">Get a Free Website Audit</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px;">I'll analyze your website and give you a detailed report with actionable improvements — for free.</p>
+                    <h4 style="font-size: 14px; margin-bottom: 12px;">What You'll Get:</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> On-Page SEO Analysis</li>
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> Backlink Profile Review</li>
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> Mobile &amp; Usability Check</li>
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> Content &amp; Keyword Gaps</li>
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> Social Media Presence Audit</li>
+                        <li style="color: var(--text-secondary); font-size: 14px; padding: 6px 0; display: flex; align-items: center; gap: 10px;"><i class="fas fa-check" style="color: var(--primary-light); font-size: 12px;"></i> Priority Recommendations</li>
+                    </ul>
+                </div>
+                <div>
+                    <form class="contact-form" action="https://api.web3forms.com/submit" method="POST" style="background: var(--dark-card); border: 1px solid rgba(245,158,11,0.15); border-radius: 16px; padding: 32px;">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <input type="hidden" name="subject" value="Free Website Audit Request - Bygenz Marketing">
+                        <input type="hidden" name="from_name" value="Bygenz Marketing - Audit Request">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <h3 style="font-size: 18px; margin-bottom: 4px; text-align: center;">Request Your Free Audit</h3>
+                        <p style="color: var(--text-muted); font-size: 12px; text-align: center; margin-bottom: 20px;">I'll send you a detailed report within 48 hours</p>
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="url" name="website" placeholder="Your Website URL (e.g. https://example.com)" required="">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                            <i class="fas fa-search"></i> Get My Free Audit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: var(--dark-light);">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Let's Work Together</h2>
+                <p>Have a project in mind? Let's talk.</p>
+            </div>
+            <div class="contact-grid reveal">
+                <div class="contact-info">
+                    <h3>Let's connect</h3>
+                    <p>Send me a message — I typically respond within 24 hours.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>bygenzmarketing@gmail.com</span>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/bygenzmarketing/" target="_blank" style="color:var(--text-secondary); text-decoration:none;">@bygenzmarketing</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fab fa-linkedin-in"></i>
+                            <a href="https://www.linkedin.com/company/126523901/" target="_blank" style="color:var(--text-secondary); text-decoration:none;">Bygenz Marketing</a>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Lead from Bygenz Marketing Website">
+                    <input type="hidden" name="from_name" value="Bygenz Marketing Website">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required="">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Your Phone Number" required="">
+                    </div>
+                    <div class="form-group">
+                        <select name="service" required="">
+                            <option value="" disabled="" selected="">Select a Service</option>
+                            <option>Social Media Management</option>
+                            <option>Facebook/Instagram Ads</option>
+                            <option>SEO Optimization</option>
+                            <option>Website Creation</option>
+                            <option>Email Marketing</option>
+                            <option>Full Digital Marketing Package</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Tell me about your project..." required=""></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+            <div class="logo" style="margin-bottom: 12px;">Bygenz Marketing</div>
+            <p style="color: var(--text-secondary); font-size: 14px; margin-bottom: 20px;">Digital Marketing Specialist helping businesses grow online.</p>
+            <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
+                <a href="#about" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">About</a>
+                <a href="#services" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">Services</a>
+                <a href="#projects" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">Projects</a>
+                <a href="#contact" style="color: var(--text-secondary); text-decoration: none; font-size: 13px;">Contact</a>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 24px;">
+                <a href="https://www.instagram.com/bygenzmarketing/" target="_blank" style="color: var(--primary-light); font-size: 18px;"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/126523901/" target="_blank" style="color: var(--primary-light); font-size: 18px;"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:bygenzmarketing@gmail.com" style="color: var(--primary-light); font-size: 18px;"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p style="color: var(--text-muted); font-size: 12px;">© 2025 Bygenz Marketing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+
+    <!-- SCRIPTS -->
+    <script>
+        // Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-target');
+                const duration = 2000;
+                const start = 0;
+                const startTime = performance.now();
+                
+                function update(currentTime) {
+                    const elapsed = currentTime - startTime;
+                    const progress = Math.min(elapsed / duration, 1);
+                    const easeOut = 1 - Math.pow(1 - progress, 3);
+                    counter.textContent = Math.floor(easeOut * target);
+                    if (progress < 1) requestAnimationFrame(update);
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Scroll Reveal
+        function reveal() {
+            const reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        // Counter trigger
+        let counterDone = false;
+        function checkCounters() {
+            if (counterDone) return;
+            const statsBar = document.querySelector('.stats-bar');
+            if (statsBar && statsBar.getBoundingClientRect().top < window.innerHeight) {
+                animateCounters();
+                counterDone = true;
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            reveal();
+            checkCounters();
+        });
+
+        // Initial check
+        reveal();
+        checkCounters();
+
+        
+        // Project Modal
+        function openProject(project) {
+            const modal = document.getElementById('projectModal');
+            const body = document.getElementById('modalBody');
+            
+            if (project === 'safari') {
+                body.innerHTML = `
+                    <h2>✈️ Intel Safari Travel</h2>
+                    <p class="modal-subtitle">Freelance Project · Social Media & Digital Setup · US Client</p>
+                    <p>Built the complete online presence for Intel Safari Travel — a US-based travel brand — entirely from scratch. The client had zero digital presence and needed a full setup across all major platforms.</p>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">📊 Platform-wise Growth & Metrics:</h3>
+                    
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;"><i class="fab fa-instagram" style="color:#E1306C;"></i></div>
+                            <div class="big-number" style="font-size:24px;">0 → 12K</div>
+                            <p>Instagram Followers</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Created from scratch · Bio optimization · Content strategy · Reels & Stories · Organic growth</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;"><i class="fab fa-facebook" style="color:#1877F2;"></i></div>
+                            <div class="big-number" style="font-size:24px;">Full Setup</div>
+                            <p>Facebook Business Manager</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Page creation · Ad account · Pixel setup · Permissions · Audience targeting</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;"><i class="fab fa-youtube" style="color:#FF0000;"></i></div>
+                            <div class="big-number" style="font-size:24px;">Channel Live</div>
+                            <p>YouTube</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Channel setup · SEO descriptions · Thumbnail strategy · Travel content planning</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;"><i class="fab fa-twitter" style="color:#1DA1F2;"></i></div>
+                            <div class="big-number" style="font-size:24px;">Active</div>
+                            <p>Twitter / X</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Profile setup · Hashtag strategy · Engagement posts · Travel community building</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;"><i class="fab fa-quora" style="color:#B92B27;"></i></div>
+                            <div class="big-number" style="font-size:24px;">Active</div>
+                            <p>Quora</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Profile setup · Travel Q&A authority · Backlink strategy · Brand visibility</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div style="font-size:20px; margin-bottom:4px;">🎯</div>
+                            <div class="big-number" style="font-size:24px;">6 Platforms</div>
+                            <p>Total Setup</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Complete digital presence built from zero to active across all channels</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">What I Did:</h3>
+                    <p>• Created & optimized all social media profiles with consistent branding<br>
+                    • Set up Facebook Business Manager end-to-end (page, ad account, pixel, permissions)<br>
+                    • Grew Instagram from 0 to 12K followers through organic content & engagement<br>
+                    • Established YouTube channel with keyword-rich descriptions & thumbnail strategy<br>
+                    • Built Twitter/X presence for travel community engagement<br>
+                    • Created Quora authority profile for travel-related Q&A and backlinks<br>
+                    • Developed full content strategy and posting schedule across all platforms</p>
+                `;
+            } else if (project === 'thirdthink') {
+                body.innerHTML = `
+                    <h2>🔍 ThirdThink Digital — Complete Website Audit</h2>
+                    <p class="modal-subtitle">SEO & Marketing Audit · WordPress Site · Namakkal, Tamil Nadu</p>
+                    <p>Conducted a full-scale SEO & marketing audit for ThirdThink Digital (<a href="https://thirdthinkdigital.com" target="_blank" style="color:var(--primary-light);">thirdthinkdigital.com</a>) — a newly launched digital marketing agency. Delivered a detailed report with actionable recommendations across 9 categories.</p>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">📊 Audit Categories & Grades:</h3>
+                    
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0;">
+                        <div class="growth-highlight" style="margin:0;">
+                            <div class="big-number" style="font-size:18px;">On-Page SEO</div>
+                            <p style="color:var(--accent);">Needs Improvement</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Missing meta description, long title, no schema, thin content</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div class="big-number" style="font-size:18px;">GEO (AI SEO)</div>
+                            <p style="color:var(--accent);">Needs Improvement</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Low rendered content, no llms.txt, no identity schema</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div class="big-number" style="font-size:18px;">Backlinks</div>
+                            <p style="color:#EF4444;">Weak</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Only 3 backlinks, 2 referring domains, near-zero authority</p>
+                        </div>
+                        <div class="growth-highlight" style="margin:0;">
+                            <div class="big-number" style="font-size:18px;">Usability</div>
+                            <p style="color:#22C55E;">Very Good</p>
+                            <p style="font-size:11px; color:var(--text-muted);">Responsive, user-friendly across all devices</p>
+                        </div>
+                    </div>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">What I Delivered:</h3>
+                    <p>• Complete On-Page SEO analysis (title, meta, headers, keywords, content)<br>
+                    • Generative Engine Optimization (GEO) assessment for AI search visibility<br>
+                    • Full backlink profile audit with quality assessment<br>
+                    • Usability & performance evaluation<br>
+                    • Social media & business listing gap analysis<br>
+                    • 20+ prioritized recommendations (High / Medium / Low priority)<br>
+                    • 6-month implementation timeline with weekly action items<br>
+                    • Performance targets & KPI tracking plan</p>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">Key Findings & Fixes:</h3>
+                    <p>• Title tag 185 chars → recommended 57 chars<br>
+                    • Missing meta description → wrote optimized 155-char description<br>
+                    • Zero schema markup → recommended Organization, LocalBusiness, FAQ schemas<br>
+                    • 353 word homepage → recommended 800–1500+ words<br>
+                    • 3 spam backlinks → link building strategy for 100+ quality links in 6 months<br>
+                    • No analytics → GA4 + Search Console setup recommended<br>
+                    • All social channels missing → full social setup plan provided</p>
+                    
+                    <div class="modal-platforms" style="margin-top: 16px;">
+                        <span>SEO Audit</span>
+                        <span>On-Page SEO</span>
+                        <span>GEO</span>
+                        <span>Link Building Strategy</span>
+                        <span>Content Strategy</span>
+                        <span>Technical SEO</span>
+                        <span>Social Media Audit</span>
+                    </div>
+                    
+                    <a href="assets/ThirdThink-Digital-SEO-Audit-Report.pdf" download class="btn btn-primary" style="margin-top: 24px; display:inline-flex;">
+                        <i class="fas fa-download"></i> Download Full Audit Report (PDF)
+                    </a>
+                `;
+            } else if (project === 'website') {
+                body.innerHTML = `
+                    <h2>🌐 Website Build</h2>
+                    <p class="modal-subtitle">Web Design Project</p>
+                    <p>Designed and built a complete professional website demonstrating strong understanding of web structure, UX principles, branding consistency, and how a website fits into an overall digital marketing strategy.</p>
+                    
+                    <div class="growth-highlight">
+                        <div class="big-number">Live Website</div>
+                        <p>Fully responsive, mobile-friendly design</p>
+                    </div>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">What I Did:</h3>
+                    <p>• Designed clean, professional layout with brand-consistent styling<br>
+                    • Built fully responsive design (works on mobile, tablet, desktop)<br>
+                    • Implemented UX best practices for navigation and user flow<br>
+                    • Optimized for fast loading and SEO basics<br>
+                    • Template customization with unique branding elements</p>
+                    
+                    <h3 style="font-size:16px; margin: 20px 0 10px;">Skills Used:</h3>
+                    <div class="modal-platforms">
+                        <span>Web Design</span>
+                        <span>Template Customization</span>
+                        <span>UX Basics</span>
+                        <span>Branding</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    
+                    <a href="#" id="websiteLink" target="_blank" class="btn btn-primary" style="margin-top: 24px; display:inline-flex;">
+                        <i class="fas fa-globe"></i> View Live Website
+                    </a>
+                `;
+            }
+            
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProject() {
+            document.getElementById('projectModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeProject();
+        });
+
+        
+        // Typing Animation
+        const words = ['Social Media', 'SEO', 'Paid Ads', 'Brand Building', 'Lead Generation', 'Content Strategy'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typedText = document.getElementById('typed-text');
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+            if (isDeleting) {
+                typedText.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typedText.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => { isDeleting = true; typeEffect(); }, 1500);
+                return;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
+        typeEffect();
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    document.querySelector('.nav-links').classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
